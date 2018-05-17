@@ -49,6 +49,7 @@ export default {
 
     &__subtitle {
         line-height: 1.5;
+        margin-bottom: 17px;
     }
 }
 </style>

@@ -36,7 +36,7 @@ export default {
 
 .re-factor-layout {
     display: block;
-    margin: 24px auto;
+    margin: 17px auto;
     width: 90%;
 }
 </style>
