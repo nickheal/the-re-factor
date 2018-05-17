@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.0.1/workbox-sw.js");
 
 importScripts(
-  "https://nickheal.github.io/the-re-factor/precache-manifest.5d4cfe5847a1396843422fb6574009dc.js"
+  "https://nickheal.github.io/the-re-factor/precache-manifest.4f0294837156435e1a677a1d7b15df18.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "src"});
