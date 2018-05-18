@@ -3,6 +3,7 @@
         class="gauge-case"
         :class="{ 'gauge-case--vertical': vertical }"    
     >
+        <ol class="gauge-markers"><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ol>
         <div
             class="gauge"
             :style="gaugeStyle"
@@ -85,6 +86,23 @@ export default {
             height: 98%;
         }
 
+        .gauge-markers {
+            li {
+                bottom: auto;
+                right: 0;
+                width: 20%;
+                height: 1px;
+                transform: translateY(-50%);
+
+                @for $i from 1 through 9 {
+                    &:nth-child(#{$i}) {
+                        left: auto;
+                        top: $i * 10%;
+                    }
+                }
+            }
+        }
+
         .gauge-sheen {
             top: 2%;
             left: 20%;
@@ -103,6 +121,31 @@ export default {
     border-radius: 999em;
     background-color: $trafficGreen;
     transition: width 300ms, height 300ms, background-color 300ms;
+}
+
+.gauge-markers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    list-style-type: none;
+
+    li {
+        position: absolute;
+        background-color: grey;
+
+        bottom: 0;
+        width: 1px;
+        height: 20%;
+        transform: translateX(-50%);
+
+        @for $i from 1 through 9 {
+            &:nth-child(#{$i}) {
+                left: $i * 10%;
+            }
+        }
+    }
 }
 
 .gauge-sheen {

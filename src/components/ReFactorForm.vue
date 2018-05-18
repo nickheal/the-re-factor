@@ -79,9 +79,9 @@ export default {
             this.$emit('update', newScore);
         },
         refactorAlgorithm(refactorHours, developerCost, percentageTimeOnBugs, developerCostAfterRefactor) {
-            const PROJECT_LIFE = 365 * 7 * 10;
-            const DEVELOPER_DURATION = 365;
-            const GOOD_BUG_PERCENTAGE = .1;
+            const PROJECT_LIFE = 365 * 7 * 2;
+            const DEVELOPER_DURATION = 365 * 7;
+            const GOOD_BUG_PERCENTAGE = 10;
 
             const totalRefactorCost = refactorHours * developerCost;
 
@@ -91,20 +91,29 @@ export default {
             const totalCostWithoutRefactor = totalDeveloperCostWithoutRefactor * (percentageTimeOnBugs / 100);
             const totalCostWithRefactor = (totalRefactorCost + totalDeveloperCostWithRefactor) * (GOOD_BUG_PERCENTAGE / 100);
             
-            const avg = (totalCostWithoutRefactor + totalCostWithRefactor) / 2;
-
-            return avg / totalCostWithRefactor;
+            if (totalCostWithoutRefactor <= totalCostWithRefactor) {
+                return 0;
+            } else {
+                return 100 - ((totalCostWithRefactor / totalCostWithoutRefactor) * 100);
+            }
         }
     }
 }
 </script>
 
 <style lang="scss" scoped>
+.label {
+    display: block;
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
 .input {
     width: 100%;
     font-size: 1em;
-    padding: 12px 24px;
-    border: solid 1px grey;
+    padding: 9px 24px 8px;
+    border: solid 1px #eee;
     border-radius: 999em;
+    margin-bottom: 18px;
 }
 </style>

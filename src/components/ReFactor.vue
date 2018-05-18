@@ -1,10 +1,13 @@
 <template>
     <div class="re-factor-layout">
         <re-factor-form
+            class="re-factor-layout__form"
             @update="refactorUpdate"
         />
         <gauge
+            class="re-factor-layout__gauge"
             :value="refactorScore"
+            vertical
         />
     </div>
 </template>
@@ -36,7 +39,19 @@ export default {
 
 .re-factor-layout {
     display: block;
-    margin: 17px auto;
-    width: 90%;
+    margin: 12px auto;
+
+    &__form {
+        width: 70%;
+        margin-left: 25%;
+    }
+
+    &__gauge {
+        position: fixed !important;
+        top: 192px;
+        left: 7.5%;
+        width: 10% !important;
+        padding-bottom: calc(100vh - 187px - 23px) !important;
+    }
 }
 </style>

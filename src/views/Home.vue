@@ -2,7 +2,7 @@
     <main class="nu-home">
         <h1 class="nu-home__title">The Re-factor</h1>
         <h2 class="nu-home__tagline">To refactor or not to refactor?</h2>
-        <p class="nu-home__subtitle">Enter details in to the inputs below to see how badly your code is in need of a refactor!</p>
+        <p class="nu-home__subtitle">Enter the details below to see how badly your code is in need of a refactor!</p>
         <re-factor/>
     </main>
 </template>
@@ -44,12 +44,13 @@ export default {
     &__tagline {
         font-size: 1.25em;
         line-height: 1;
-        margin-bottom: 39px;
+        margin-bottom: 15px;
     }
 
     &__subtitle {
         line-height: 1.5;
-        margin-bottom: 17px;
+        margin-bottom: 36px;
+        padding: 0 1em;
     }
 }
 </style>
