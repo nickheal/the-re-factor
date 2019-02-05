@@ -1,48 +1,48 @@
 {
-    "name": "src",
-    "version": "0.1.0",
-    "private": true,
-    "scripts": {
-        "serve": "vue-cli-service serve --open",
-        "build": "vue-cli-service build",
-        "test": "vue-cli-service test",
-        "lint": "vue-cli-service lint",
-        "deploy": "npm run build; push-dir --dir=dist --branch=gh-pages --cleanup --allow-unclean"
-    },
-    "dependencies": {
-        "animejs": "^2.2.0",
-        "register-service-worker": "^1.0.0",
-        "vue": "^2.5.13",
-        "vue-router": "^3.0.1",
-        "vuex": "^3.0.1"
-    },
-    "devDependencies": {
-        "@vue/cli-plugin-babel": "^3.0.0-beta.6",
-        "@vue/cli-plugin-eslint": "^3.0.0-beta.6",
-        "@vue/cli-plugin-pwa": "^3.0.0-beta.6",
-        "@vue/cli-plugin-unit-jest": "^3.0.0-beta.6",
-        "@vue/cli-service": "^3.0.0-beta.6",
-        "@vue/eslint-config-airbnb": "^3.0.0-beta.6",
-        "@vue/test-utils": "^1.0.0-beta.10",
-        "babel-core": "^7.0.0-0",
-        "babel-jest": "^22.0.4",
-        "node-sass": "^4.7.2",
-        "push-dir": "^0.4.1",
-        "sass-loader": "^6.0.6",
-        "vue-i18n": "^7.6.0",
-        "vue-template-compiler": "^2.5.13"
-    },
-    "babel": {
-        "presets": [
-            "@vue/app"
-        ],
-        "plugins": [
-            "@babel/plugin-proposal-object-rest-spread"
-        ]
-    },
-    "browserslist": [
-        "> 1%",
-        "last 2 versions",
-        "not ie <= 8"
+  "name": "src",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve --open",
+    "build": "vue-cli-service build",
+    "test": "vue-cli-service test",
+    "lint": "vue-cli-service lint",
+    "deploy": "npm run build; push-dir --dir=dist --branch=gh-pages --cleanup --allow-unclean"
+  },
+  "dependencies": {
+    "animejs": "^3.0.1",
+    "register-service-worker": "^1.5.2",
+    "vue": "^2.6.2",
+    "vue-router": "^3.0.2",
+    "vuex": "^3.1.0"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.4.0",
+    "@vue/cli-plugin-eslint": "^3.4.0",
+    "@vue/cli-plugin-pwa": "^3.4.0",
+    "@vue/cli-plugin-unit-jest": "^3.4.0",
+    "@vue/cli-service": "^3.4.0",
+    "@vue/eslint-config-airbnb": "^4.0.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-core": "^7.0.0-0",
+    "babel-jest": "^24.1.0",
+    "node-sass": "^4.11.0",
+    "push-dir": "^0.4.1",
+    "sass-loader": "^7.1.0",
+    "vue-i18n": "^8.8.0",
+    "vue-template-compiler": "^2.6.2"
+  },
+  "babel": {
+    "presets": [
+      "@vue/app"
+    ],
+    "plugins": [
+      "@babel/plugin-proposal-object-rest-spread"
     ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ]
 }
